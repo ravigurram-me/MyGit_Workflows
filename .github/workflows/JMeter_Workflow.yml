@@ -12,7 +12,7 @@ jobs:
           uses: QAInsights/PerfAction@v3.1
           with:
             test-plan-path: Jmeter_GitWorkflow.jmx
-            args: "-e -o report"
+            args: "-e -o Jmeter_Report"
         - name: 'Upload Report'
           if: ${{ always() }}
           uses: actions/upload-artifact@v3
