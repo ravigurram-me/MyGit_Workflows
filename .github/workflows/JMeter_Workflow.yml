@@ -7,16 +7,16 @@ jobs:
       steps:
         - uses: actions/checkout@v3
         - name: Create Folder for reports
-          run: mkdir TestReports
+          run: mkdir report
         - name: JMeter
           uses: QAInsights/PerfAction@v3.1
           with:
             test-plan-path: Jmeter_GitWorkflow.jmx
-            args: "-e -o Jmeter_Report"
+            args: "-e -o report"
         - name: 'Upload Report'
           if: ${{ always() }}
           uses: actions/upload-artifact@v3
           with:
-            name: Jmeter_Report
-            path: TestReports
+            name: report
+            path: report
             retention-days: 2
