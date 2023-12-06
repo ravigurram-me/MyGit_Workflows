@@ -1,5 +1,9 @@
 name: Jmeter Test Workflow
-'on': push
+# 'on': push
+'on':
+  workflow_dispatch:
+  schedule:
+   - cron: "5 * * * *"
 jobs:
     test_auto:
       name: "Jmeter Load Test Workflow"
