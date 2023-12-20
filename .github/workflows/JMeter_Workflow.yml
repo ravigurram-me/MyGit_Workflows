@@ -4,7 +4,7 @@ name: Jmeter Test Workflow
   schedule:
     # - cron: "0 12 * * 0"  # [ $(date +\%d) -le 07 ]
     #- cron: "15 16 * * 3 [ $(date +%m -d 'last month') != $(date +%m) ]"
-    - cron: 20 16 * * 3 [ $(date +\%d) -le 07 ]
+    - cron: '20 16 * * 3 [ $(date +%d) -le 07 ]"
 jobs:
   test_auto:
     name: Jmeter Load Test Workflow
